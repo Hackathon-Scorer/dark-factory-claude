@@ -1,10 +1,11 @@
 [project]
-name = "dark-factory-gemini"
+name = "dark-factory-claude"
 version = "0.1.0"
 description = "Generic coordinator/implementer/reviewer software factory for Band Desktop — Claude Code, Google ADK (Gemini) or hybrid seats"
 readme = "README.md"
 authors = [
-    { name = "Pushkar Kumar", email = "pushkarkumar0997@gmail.com" }
+    { name = "Pushkar Kumar", email = "pushkarkumar0997@gmail.com" },
+    { name = "Amaan Sayyed", email = "amaansayydd@gmail.com" },
 ]
 requires-python = ">=3.13"
 dependencies = [
@@ -12,7 +13,6 @@ dependencies = [
     "python-dotenv>=1.0",
     "tzdata>=2024.1",
 ]
-
 
 [dependency-groups]
 dev = ["pytest>=8"]

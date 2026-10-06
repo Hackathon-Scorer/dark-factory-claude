@@ -28,7 +28,7 @@ Paths must not contain spaces or `:`. The original checkout under `Hackathon - 6
 `uv sync`; clone to e.g. `~/dark-factory` for real use.
 
 ```bash
-git clone https://github.com/<org>/dark-factory-gemini ~/dark-factory && cd ~/dark-factory && uv sync
+git clone https://github.com/Hackathon-Scorer/dark-factory-claude ~/dark-factory && cd ~/dark-factory && uv sync
 mkdir -p ~/band-work && git clone https://github.com/band-ai/dark-factory-wearedevs ~/band-work/kickoff
 uv venv ~/band-work/.venv --python 3.13
 uv pip install --python ~/band-work/.venv/bin/python -r ~/band-work/kickoff/harness/requirements.txt
@@ -111,7 +111,7 @@ scripts/import_room.sh ~/Downloads/<room>.json ~/band-work/tk-final tablekeeper
 scripts/assemble_submission.sh ~/band-work/tk-final tablekeeper     # merges band history into this repo
 uv run python scripts/run_checks.py --repo . --track tablekeeper --stage all --isolated
 git push                                                            # never force-push
-scripts/fresh_clone_check.sh https://github.com/<org>/dark-factory-gemini tablekeeper
+scripts/fresh_clone_check.sh https://github.com/Hackathon-Scorer/dark-factory-claude tablekeeper
 ```
 
 Prove the `Model:` lines: `grep -ho '"model":"[^"]*"' ~/.claude/projects/-Users-*-band-work/*.jsonl | sort | uniq -c`

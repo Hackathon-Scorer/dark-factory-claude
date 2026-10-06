@@ -1,4 +1,4 @@
-# dark-factory-gemini
+# dark-factory-claude
 
 A generic **coordinator → implementer → reviewer** software factory for
 [Band Desktop](https://band.ai), entered in the WeAreDevelopers × BAND *Dark Factory*
@@ -30,6 +30,21 @@ claims its own stage: suite 1 120/120, suite 2 25/25, suite 3 7/7, suite 4 6/6.
 | [docs/teammate_handoff.md](docs/teammate_handoff.md) | current status, exact commands, run book |
 | [docs/decisions.md](docs/decisions.md) | track choice and other decisions, with evidence |
 | `stage-1/` … `stage-4/`, `room.json` | **produced by the band** in the judged run and merged in; never hand-written |
+
+## Who committed what (and why that is by design)
+
+The participant guide asks teams to write `README.md` and `FACTORY.md` themselves, and to
+leave the code under `stage-N/` to the band. This history follows that split, and none of it
+was rewritten:
+
+| Path | Committed by | How |
+|---|---|---|
+| `stage-1/` … `stage-4/` | **the band's Implementer seat only** (13 commits) | made in the run's result repository, then merged here unchanged (hashes match `room.json`) |
+| `room.json` | the team | the Band console's full-session download, unchanged |
+| `factory/`, `mandates/`, `scripts/`, `tests/`, docs | the team (Amaan Sayyed, Pushkar Kumar), with Claude as co-author on many commits | the factory itself |
+
+`python scripts/run_checks.py` re-verifies the first row: every commit touching a stage
+folder is authored by the Implementer seat.
 
 ## Layout
 
@@ -73,7 +88,7 @@ The repository is configured for immediate one-click deployment on [Replit](http
 
 1. **Import the Repository**:
    - In Replit, select **"Create Repl"** → **"Import from GitHub"**.
-   - Paste the repository URL: `https://github.com/Pushkar0997/dark-factory-gemini`.
+   - Paste the repository URL: `https://github.com/Hackathon-Scorer/dark-factory-claude`.
 2. **Automatic Configuration**:
    - Replit reads `.replit` and `replit.nix` automatically.
    - Run command: `python stage-4/app.py`
