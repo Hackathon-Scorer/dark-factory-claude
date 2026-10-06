@@ -1,0 +1,12 @@
+{"users":[{"id":"u_demo","email":"demo@example.com","password":"correct horse","display_name":"Ada Lovelace"}],
+ "restaurants":[
+  {"id":"r_anker","name":"Zum Anker","timezone":"Europe/Berlin","slot_minutes":30,"reservation_duration_minutes":90,"cancellation_cutoff_minutes":120,
+   "opening_hours":[{"weekday":"mon","opens":"17:00","closes":"23:00"},{"weekday":"tue","opens":"17:00","closes":"23:00"},{"weekday":"wed","opens":"17:00","closes":"23:00"},{"weekday":"thu","opens":"17:00","closes":"23:00"},{"weekday":"fri","opens":"17:00","closes":"23:30"},{"weekday":"sat","opens":"12:00","closes":"23:30"}],
+   "tables":[{"id":"t_1","label":"Window 1","capacity":2},{"id":"t_2","label":"Window 2","capacity":2},{"id":"t_3","label":"Booth","capacity":4},{"id":"t_4","label":"Garden","capacity":6}],
+   "combinable":[["t_1","t_2"],["t_2","t_3"]]},
+  {"id":"r_nyc","name":"Hudson Oyster Bar","timezone":"America/New_York","slot_minutes":30,"reservation_duration_minutes":120,"cancellation_cutoff_minutes":60,
+   "opening_hours":[{"weekday":"thu","opens":"18:00","closes":"23:00"},{"weekday":"fri","opens":"18:00","closes":"23:00"}],
+   "tables":[{"id":"n_1","label":"Bar","capacity":2},{"id":"n_2","label":"Corner","capacity":4}]}],
+ "reservations":[
+  {"id":"res_s1","reference":"SEED01","user_id":"u_demo","restaurant_id":"r_anker","table_id":"t_3","starts_at_local":"2026-10-08T19:00","party_size":4},
+  {"id":"res_s2","reference":"SEED02","user_id":"u_demo","restaurant_id":"r_anker","table_id":"t_1","starts_at_local":"2026-10-08T18:00","party_size":2}]}

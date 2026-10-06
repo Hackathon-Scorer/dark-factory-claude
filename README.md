@@ -31,6 +31,20 @@ claims its own stage: suite 1 120/120, suite 2 25/25, suite 3 7/7, suite 4 6/6.
 | [docs/decisions.md](docs/decisions.md) | track choice and other decisions, with evidence |
 | `stage-1/` … `stage-4/`, `room.json` | **produced by the band** in the judged run and merged in; never hand-written |
 
+## Live demo
+
+`deploy/` packages the band's **unchanged** `stage-4/` service for a public demo: it copies
+`stage-4/app.py` and `static/`, then loads demo data (`deploy/demo-fixture.json`) through
+the service's own reset endpoint at start. Judging never uses it; judges build
+`stage-4/Dockerfile`.
+
+- **Render (free):** dashboard → New → Blueprint → this repository (`render.yaml`).
+- **Anywhere with Docker:** `docker build -f deploy/Dockerfile -t tablekeeper-demo . && docker run -p 8080:8080 tablekeeper-demo`
+
+Demo login: `demo@example.com` / `correct horse`. Try Zum Anker on 2026-10-08 for 2 guests.
+The demo exposes the spec's unauthenticated test endpoints, so anyone can reset it;
+restarting the service reloads the demo data.
+
 ## Who committed what (and why that is by design)
 
 The participant guide asks teams to write `README.md` and `FACTORY.md` themselves, and to

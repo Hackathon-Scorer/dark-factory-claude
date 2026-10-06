@@ -1,0 +1,9 @@
+# One-click public demo on Render (https://render.com): New → Blueprint → this repository.
+services:
+  - type: web
+    name: tablekeeper-demo
+    runtime: docker
+    dockerfilePath: deploy/Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
